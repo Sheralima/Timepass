@@ -1,1 +1,380 @@
-1
+/* ==========================================
+   SKR INTERNATIONAL V4
+   style.css - Part 1
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f9fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(90deg,#0d6efd,#0056b3);
+}
+
+header h1{
+    font-size:2.2rem;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+header p{
+    font-size:1rem;
+    margin-top:8px;
+}
+
+/* Navbar */
+
+.navbar{
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.navbar-brand{
+    font-weight:bold;
+    font-size:1.2rem;
+}
+
+.navbar-brand img{
+    border-radius:50%;
+}
+
+.nav-link{
+    color:#fff !important;
+    margin-left:8px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+/* Hero */
+
+.hero{
+    min-height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("images/banner.jpg") center/cover no-repeat;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin:20px 0;
+}
+
+.hero .btn{
+    margin:8px;
+    padding:12px 30px;
+    border-radius:50px;
+}
+
+/* Slider */
+
+.slider{
+    width:100%;
+    height:70vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    width:100%;
+    height:70vh;
+    object-fit:cover;
+    display:none;
+}
+
+.slide.active{
+    display:block;
+    animation:fade 1s;
+}
+
+@keyframes fade{
+    from{opacity:.4;}
+    to{opacity:1;}
+}
+
+/* Section */
+
+section{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+h2{
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+p{
+    color:#555;
+}
+/* ==========================================
+   SKR INTERNATIONAL V4
+   style.css - Part 2
+========================================== */
+
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:15px;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card-body{
+    padding:30px;
+}
+
+.card h4{
+    color:#0d6efd;
+    font-weight:700;
+    margin-top:15px;
+}
+
+/* Buttons */
+
+.btn{
+    border-radius:50px;
+    padding:10px 25px;
+    transition:0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-warning:hover,
+.btn-success:hover{
+    transform:scale(1.05);
+}
+
+/* Forms */
+
+form{
+    background:#fff;
+}
+
+.form-control{
+    border-radius:10px;
+    padding:12px;
+}
+
+.form-control:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 8px rgba(13,110,253,.25);
+}
+
+/* Team Images */
+
+.rounded-circle{
+    border:5px solid #0d6efd;
+    transition:0.3s;
+}
+
+.rounded-circle:hover{
+    transform:scale(1.05);
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:#fff;
+}
+
+footer p{
+    color:#ddd;
+    margin-bottom:5px;
+}
+
+footer a{
+    color:#ffc107;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* Contact Map */
+
+.ratio iframe{
+    border-radius:15px;
+}
+
+/* Utility */
+
+.shadow{
+    box-shadow:0 10px 25px rgba(0,0,0,.12)!important;
+}
+/* ==========================================
+   SKR INTERNATIONAL V4
+   style.css - Part 3
+========================================== */
+
+/* Smooth Animations */
+
+.fade-up{
+    animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    transition:0.3s ease;
+}
+
+img:hover{
+    transform:scale(1.02);
+}
+
+/* Mobile Responsive */
+
+@media (max-width:992px){
+
+.navbar-brand{
+    font-size:1rem;
+}
+
+.hero{
+    min-height:350px;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.slider,
+.slide{
+    height:50vh;
+}
+
+.card{
+    margin-bottom:20px;
+}
+
+}
+
+@media (max-width:768px){
+
+header h1{
+    font-size:1.7rem;
+}
+
+header p{
+    font-size:0.9rem;
+}
+
+.hero{
+    min-height:300px;
+    padding:40px 15px;
+}
+
+.hero h1{
+    font-size:1.8rem;
+}
+
+.hero p{
+    font-size:0.95rem;
+}
+
+.hero .btn{
+    display:block;
+    width:100%;
+    margin:10px 0;
+}
+
+.slider,
+.slide{
+    height:35vh;
+}
+
+.navbar-nav{
+    text-align:center;
+}
+
+.card{
+    margin-bottom:20px;
+}
+
+section{
+    padding-top:40px;
+    padding-bottom:40px;
+}
+
+}
+
+@media (max-width:576px){
+
+header h1{
+    font-size:1.5rem;
+}
+
+.hero h1{
+    font-size:1.5rem;
+}
+
+.hero p{
+    font-size:0.9rem;
+}
+
+.slider,
+.slide{
+    height:28vh;
+}
+
+.btn{
+    width:100%;
+}
+
+.card-body{
+    padding:20px;
+}
+
+footer{
+    font-size:14px;
+}
+
+}
+/* End of style.css */1
